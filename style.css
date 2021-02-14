@@ -1,3 +1,35 @@
-body {
-    color: aliceblue;
+
+body{
+    padding: 40px;
+}
+/* header */
+
+.header_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.tesitmonials_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* footer */
+.footer_wrapper > .links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+
+.footer_wrapper > .social_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
