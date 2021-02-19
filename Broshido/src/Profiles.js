@@ -1,86 +1,92 @@
+import "./FooterStyles.css";
+import "./ProfilesStyles.css";
 function Profiles() {
   return (
     <>
-      <div class="samurai_friends_wrapper">
-        <div class="img_wrapper">img1</div>
+      <div className="samurai_friends_wrapper">
+        <div className="img_wrapper">img1</div>
 
-        <div class="img_wrapper">img1</div>
+        <div className="img_wrapper">img1</div>
 
-        <div class="img_wrapper">img1</div>
+        <div className="img_wrapper">img1</div>
 
-        <div class="img_wrapper">img1</div>
+        <div className="img_wrapper">img1</div>
       </div>
 
-      <div class="samurai_profiles_wrapper">
-        <div class="samurai_type">
+      <div className="samurai_profiles_wrapper">
+        <div className="Section1">
           <div>
-            <h1>TYPE OF SAMURAI</h1>
+            <h1>YOKAI EXTERMINATION</h1>
           </div>
+          <div className="samurai_type">
+            <div className="samurai">
+              3<h2>Lauren</h2>
+            </div>
 
-          <div class="samurai">
-            3<h2>Name</h2>
-          </div>
+            <div className="samurai">
+              2<h2>Suga</h2>
+            </div>
 
-          <div class="samurai">
-            2<h2>Name</h2>
-          </div>
-
-          <div class="samurai">
-            1<h2>Name</h2>
+            <div className="samurai">
+              1<h2>Taro</h2>
+            </div>
           </div>
         </div>
 
-        <div class="samurai_type">
+        <div className="Section1">
           <div>
-            <h1>TYPE OF SAMURAI</h1>
+            <h1>BODY GUARD</h1>
           </div>
+          <div className="samurai_type">
+            <div className="samurai">
+              3<h2>Ken</h2>
+            </div>
 
-          <div class="samurai">
-            3<h2>Name</h2>
-          </div>
+            <div className="samurai">
+              2<h2>Keisuke</h2>
+            </div>
 
-          <div class="samurai">
-            2<h2>Name</h2>
-          </div>
-
-          <div class="samurai">
-            1<h2>Name</h2>
+            <div className="samurai">
+              1<h2>Machan</h2>
+            </div>
           </div>
         </div>
 
-        <div class="samurai_type">
+        <div className="Section1">
           <div>
-            <h1>TYPE OF SAMURAI</h1>
+            <h1>ENTERTAINMENT</h1>
           </div>
+          <div className="samurai_type">
+            <div className="samurai">
+              3<h2>Satoshi</h2>
+            </div>
 
-          <div class="samurai">
-            3<h2>Name</h2>
-          </div>
+            <div className="samurai">
+              2<h2>Marissa</h2>
+            </div>
 
-          <div class="samurai">
-            2<h2>Name</h2>
-          </div>
-
-          <div class="samurai">
-            1<h2>Name</h2>
+            <div className="samurai">
+              1<h2>Seiya</h2>
+            </div>
           </div>
         </div>
 
-        <div class="samurai_type">
+        <div className="Section1">
           <div>
-            <h1>TYPE OF SAMURAI</h1>
+            <h1>PRANK YOUR FRIENDS</h1>
           </div>
+          <div className="samurai_type">
+            <div className="samurai">
+              1<h2>Darren</h2>
+            </div>
 
-          <div class="samurai">
-            1<h2>Name</h2>
-          </div>
+            <div className="samurai">
+              2<h2>Echan</h2>
+            </div>
 
-          <div class="samurai">
-            2<h2>Name</h2>
-          </div>
-
-          <div class="samurai">
-            3<h2>Name</h2>
+            <div className="samurai">
+              3<h2>Someone</h2>
+            </div>
           </div>
         </div>
       </div>
@@ -104,7 +110,7 @@ function Profiles() {
           </div>
         </div>
 
-        <div className="Social_wrapper">
+        <div className="social_wrapper">
           <div className="Icon">
             <a href="">Facebook</a>
           </div>

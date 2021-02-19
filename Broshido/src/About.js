@@ -1,15 +1,17 @@
+import "./FooterStyles.css";
+import "./AboutStyles.css";
 function About() {
   return (
     <>
       {/* about */}
-      <div class="about_wrapper">
-        <div>
-          <h1>We are Broshido!</h1>
+      <div className="about_wrapper">
+        <div className="whoWeAre">
+          <h1>We are Broshido</h1>
         </div>
 
-        <div class="group_image">group image</div>
+        <div className="group_image">group image</div>
 
-        <div class="about_story">
+        <div className="about_story">
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Perferendis rerum deleniti laudantium ex. Expedita, voluptates velit

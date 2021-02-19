@@ -1,0 +1,16 @@
+.footer_wrapper > .links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.footer_wrapper > .social_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_wrapper > .social_wrapper > .Icon {
+  margin: 0px 30px 30px 0px;
+}

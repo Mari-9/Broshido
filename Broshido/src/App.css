@@ -1,0 +1,29 @@
+body {
+  padding: 0px 40px;
+  background-color: #edf3f4;
+  color: #0e0e0e;
+}
+
+/* testimonials */
+
+.tesitmonials_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tesitmonials_wrapper > .testimonials_header {
+  display: flex;
+  align-items: center;
+}
+
+/* reserve */
+.reserve_wrapper {
+  display: grid;
+  justify-content: center;
+  margin: 100px 0px;
+}
+
+.reserve_wrapper > .button {
+  display: grid;
+  justify-content: center;
+}

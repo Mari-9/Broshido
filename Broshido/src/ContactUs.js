@@ -1,3 +1,4 @@
+import "./FooterStyles.css";
 function ContactUs() {
   return (
     <>
@@ -26,7 +27,7 @@ function ContactUs() {
           </div>
         </div>
 
-        <div className="Social_wrapper">
+        <div className="social_wrapper">
           <div className="Icon">
             <a href="">Facebook</a>
           </div>
