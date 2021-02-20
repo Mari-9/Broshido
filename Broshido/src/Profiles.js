@@ -1,6 +1,8 @@
-import "./FooterStyles.css";
-import "./ProfilesStyles.css";
-function Profiles() {
+import "./Styles/FooterStyles.css";
+import "./Styles/ProfilesStyles.css";
+import React, { Component } from "react";
+import { fetchSamuraiProfiles } from "./DataSource";
+function Profileshold() {
   return (
     <>
       <div className="samurai_friends_wrapper">
@@ -90,46 +92,36 @@ function Profiles() {
           </div>
         </div>
       </div>
-
-      <div className="footer_wrapper">
-        <div className="links-wrapper">
-          <div className="nav-link">
-            <a href="">Home</a>
-          </div>
-
-          <div className="nav-link">
-            <a href="">About</a>
-          </div>
-
-          <div className="nav-link">
-            <a href="">Profiles</a>
-          </div>
-
-          <div className="nav-link">
-            <a href="">Contact Us</a>
-          </div>
-        </div>
-
-        <div className="social_wrapper">
-          <div className="Icon">
-            <a href="">Facebook</a>
-          </div>
-
-          <div className="Icon">
-            <a href="">twitter</a>
-          </div>
-
-          <div className="Icon">
-            <a href="">youtube</a>
-          </div>
-
-          <div className="Icon">
-            <a href="">instagram</a>
-          </div>
-        </div>
-      </div>
     </>
   );
+}
+
+class Profiles extends Component {
+  renderSamurai = () => {
+    let children = [];
+    children = fetchSamuraiProfiles().map(item => (
+      <div className="Section1">
+        <div>
+          <h1>{item.title}</h1>
+        </div>
+        <div className="samurai_type">
+          {item.children.map(samurai => (
+            <div className="samurai">
+              1<h2>{samurai.name}</h2>
+            </div>
+          ))}
+        </div>
+      </div>
+    ));
+    return children;
+  };
+
+  render() {
+    const { className, title } = this.props;
+    return (
+      <div className="samurai_profiles_wrapper">{this.renderSamurai()}</div>
+    );
+  }
 }
 
 export default Profiles;

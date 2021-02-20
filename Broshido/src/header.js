@@ -1,17 +1,12 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  NavLink
-} from "react-router-dom";
-import logo from "./Broshido.png";
-import "./headerStyles.css";
+import { NavLink } from "react-router-dom";
+import logo from "./Images/Broshido.png";
+import "./Styles/HeaderStyles.css";
 function Header() {
   return (
     // <!-- main pg header -->
     <div className="header_wrapper">
       <div className="logo">
-        <img src={logo} alt="LOGO" style={{ width: "200px" }} />
+        <img src={logo} alt="LOGO"  />
       </div>
       <div className="HeaderNavLinks">
         <div className="NavLink">

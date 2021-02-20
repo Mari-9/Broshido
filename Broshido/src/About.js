@@ -1,5 +1,5 @@
-import "./FooterStyles.css";
-import "./AboutStyles.css";
+import "./Styles/FooterStyles.css";
+import "./Styles/AboutStyles.css";
 function About() {
   return (
     <>
@@ -27,7 +27,7 @@ function About() {
       </div>
 
       <div className="tesitmonials_wrapper">
-        <div className="tesimonials">
+        <div className="testimonials">
           <div className="test_name">Name goes here</div>
           <div className="star_rating">*****</div>
           <div className="review">
@@ -36,7 +36,7 @@ function About() {
           </div>
         </div>
 
-        <div className="tesimonials">
+        <div className="testimonials">
           <div className="test_name">Name goes here</div>
           <div className="star_rating">*****</div>
           <div className="review">
@@ -45,7 +45,7 @@ function About() {
           </div>
         </div>
 
-        <div className="tesimonials">
+        <div className="testimonials">
           <div className="test_name">Name goes here</div>
           <div className="star_rating">*****</div>
           <div className="review">
@@ -63,45 +63,6 @@ function About() {
           <button>
             <a href="">this is link to profile pg</a>
           </button>
-        </div>
-      </div>
-
-      {/* footer */}
-      <div className="footer_wrapper">
-        <div className="links-wrapper">
-          <div className="nav-link">
-            <a href="">Home</a>
-          </div>
-
-          <div className="nav-link">
-            <a href="">About</a>
-          </div>
-
-          <div className="nav-link">
-            <a href="">Profiles</a>
-          </div>
-
-          <div className="nav-link">
-            <a href="">Contact Us</a>
-          </div>
-        </div>
-
-        <div className="social_wrapper">
-          <div className="Icon">
-            <a href="">Facebook</a>
-          </div>
-
-          <div className="Icon">
-            <a href="">twitter</a>
-          </div>
-
-          <div className="Icon">
-            <a href="">youtube</a>
-          </div>
-
-          <div className="Icon">
-            <a href="">instagram</a>
-          </div>
         </div>
       </div>
     </>

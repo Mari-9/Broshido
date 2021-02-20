@@ -8,7 +8,7 @@
 .about_wrapper > .about_story {
   display: grid;
   justify-items: center;
-  padding: 0px 250px 0px 250px;
+  padding: 0px 100px 0px 100px;
 }
 
 .about_wrapper > .whoWeAre h1 {

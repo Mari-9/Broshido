@@ -21,13 +21,12 @@ need a mini header look as well!!!!!!!!
   padding-top: 30px;
 }
 
+.header_wrapper > .logo img {
+  width: 200px;
+}
+
 .header_wrapper > .HeaderNavLinks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 50px 50px 50px 50px;
-}
-
-.header_wrapper > .HeaderNavLinks > .NavLink a {
-  text-decoration: none;
-  color: #0e0e0e;
 }

@@ -1,5 +1,5 @@
-import "./HomeStyles.css";
-import "./FooterStyles.css";
+import "./Styles/HomeStyles.css";
+import logo from "./Images/HomepgSamurai.jpg";
 
 function Home() {
   return (
@@ -10,8 +10,8 @@ function Home() {
           <h2>Do feel you have been missing a samurai in your life?</h2>
         </div>
 
-        <div className="hook_right">
-          <img src="" alt="some cheesy photo" />
+        <div className="hook_right foo">
+          <img src={logo} alt="HomepgSamurai" />
         </div>
       </div>
       <div className="hook_information">
@@ -27,28 +27,23 @@ function Home() {
 
       {/* samurai type */}
       <div className="typesOfSamurai_wrapper">
-        <div className="samuariTypeRight">
-          <div className="type">
-            <img src="" alt="cute samrai" />
-            <h1>YOKAI EXTERMINATION</h1>
-          </div>
-
-          <div className="type">
-            <img src="" alt="cute samrai 2" />
-            <h1>BODY GUARD</h1>
-          </div>
+        <div className="type">
+          <img src="" alt="cute samrai" />
+          <h1>YOKAI EXTERMINATION</h1>
+        </div>
+        <div className="type">
+          <img src="" alt="cute samrai 2" />
+          <h1>BODY GAURD</h1>
         </div>
 
-        <div className="samuariTypeLeft">
-          <div classeName="type">
-            <img src="" alt="cute samrai 3" />
-            <h1>ENTERTAINMENT</h1>
-          </div>
+        <div classeName="type">
+          <img src="" alt="cute samrai 3" />
+          <h1>ENTERTAINMENT</h1>
+        </div>
 
-          <div className="type">
-            <img src="" alt="cute samrai 4" />
-            <h1>PRANK YOUR FRIENDS</h1>
-          </div>
+        <div className="type">
+          <img src="" alt="cute samrai 4" />
+          <h1>PRANK YOUR FRIENDS</h1>
         </div>
       </div>
 
@@ -58,7 +53,7 @@ function Home() {
       </div>
 
       <div className="tesitmonials_wrapper">
-        <div className="tesimonials">
+        <div className="testimonials">
           <div className="test_name">Name goes here</div>
           <div className="star_rating">*****</div>
           <div className="review">
@@ -67,7 +62,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="tesimonials">
+        <div className="testimonials">
           <div className="test_name">Name goes here</div>
           <div className="star_rating">*****</div>
           <div className="review">
@@ -76,7 +71,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="tesimonials">
+        <div className="testimonials">
           <div className="test_name">Name goes here</div>
           <div className="star_rating">*****</div>
           <div className="review">
@@ -94,45 +89,6 @@ function Home() {
           <button>
             <a href="">this is link to profile pg</a>
           </button>
-        </div>
-      </div>
-
-      {/* footer */}
-      <div className="footer_wrapper">
-        <div className="links-wrapper">
-          <div className="nav-link">
-            <a href="">Home</a>
-          </div>
-
-          <div className="nav-link">
-            <a href="">About</a>
-          </div>
-
-          <div className="nav-link">
-            <a href="">Profiles</a>
-          </div>
-
-          <div className="nav-link">
-            <a href="">Contact Us</a>
-          </div>
-        </div>
-
-        <div className="social_wrapper">
-          <div className="Icon">
-            <a href="">Facebook</a>
-          </div>
-
-          <div className="Icon">
-            <a href="">twitter</a>
-          </div>
-
-          <div className="Icon">
-            <a href="">youtube</a>
-          </div>
-
-          <div className="Icon">
-            <a href="">instagram</a>
-          </div>
         </div>
       </div>
     </>
