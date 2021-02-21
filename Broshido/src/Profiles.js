@@ -2,126 +2,77 @@ import "./Styles/FooterStyles.css";
 import "./Styles/ProfilesStyles.css";
 import React, { Component } from "react";
 import { fetchSamuraiProfiles } from "./DataSource";
-function Profileshold() {
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
+function MyVerticallyCenteredModal(props) {
   return (
-    <>
-      <div className="samurai_friends_wrapper">
-        <div className="img_wrapper">img1</div>
-
-        <div className="img_wrapper">img1</div>
-
-        <div className="img_wrapper">img1</div>
-
-        <div className="img_wrapper">img1</div>
-      </div>
-
-      <div className="samurai_profiles_wrapper">
-        <div className="Section1">
-          <div>
-            <h1>YOKAI EXTERMINATION</h1>
-          </div>
-          <div className="samurai_type">
-            <div className="samurai">
-              3<h2>Lauren</h2>
-            </div>
-
-            <div className="samurai">
-              2<h2>Suga</h2>
-            </div>
-
-            <div className="samurai">
-              1<h2>Taro</h2>
-            </div>
-          </div>
-        </div>
-
-        <div className="Section1">
-          <div>
-            <h1>BODY GUARD</h1>
-          </div>
-          <div className="samurai_type">
-            <div className="samurai">
-              3<h2>Ken</h2>
-            </div>
-
-            <div className="samurai">
-              2<h2>Keisuke</h2>
-            </div>
-
-            <div className="samurai">
-              1<h2>Machan</h2>
-            </div>
-          </div>
-        </div>
-
-        <div className="Section1">
-          <div>
-            <h1>ENTERTAINMENT</h1>
-          </div>
-          <div className="samurai_type">
-            <div className="samurai">
-              3<h2>Satoshi</h2>
-            </div>
-
-            <div className="samurai">
-              2<h2>Marissa</h2>
-            </div>
-
-            <div className="samurai">
-              1<h2>Seiya</h2>
-            </div>
-          </div>
-        </div>
-
-        <div className="Section1">
-          <div>
-            <h1>PRANK YOUR FRIENDS</h1>
-          </div>
-          <div className="samurai_type">
-            <div className="samurai">
-              1<h2>Darren</h2>
-            </div>
-
-            <div className="samurai">
-              2<h2>Echan</h2>
-            </div>
-
-            <div className="samurai">
-              3<h2>Someone</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Calendar />
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
   );
 }
 
-class Profiles extends Component {
-  renderSamurai = () => {
-    let children = [];
-    children = fetchSamuraiProfiles().map(item => (
-      <div className="Section1">
-        <div>
-          <h1>{item.title}</h1>
-        </div>
-        <div className="samurai_type">
-          {item.children.map(samurai => (
-            <div className="samurai">
-              1<h2>{samurai.name}</h2>
-            </div>
-          ))}
-        </div>
+const renderSamurai = () => {
+  let children = [];
+  children = fetchSamuraiProfiles().map(item => (
+    <div className="Section1">
+      <div>
+        <h1>{item.title}</h1>
       </div>
-    ));
-    return children;
-  };
+      <div className="samurai_type">
+        {item.children.map(samurai => (
+          <div className="samurai">
+            <img src={samurai.image} alt="Samurai" />
+            <h2>{samurai.name}</h2>
+          </div>
+        ))}
+      </div>
+    </div>
+  ));
+  return children;
+};
 
-  render() {
-    const { className, title } = this.props;
-    return (
-      <div className="samurai_profiles_wrapper">{this.renderSamurai()}</div>
-    );
-  }
+// class Profiles extends Component {
+function Profiles() {
+  const [modalShow, setModalShow] = React.useState(false);
+  // render() {
+  return (
+    <>
+      <Button variant="primary" onClick={() => setModalShow(true)}>
+        Launch vertically centered modal
+      </Button>
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+      <div className="samurai_profiles_wrapper">{renderSamurai()}</div>;
+    </>
+  );
+  // }
 }
 
 export default Profiles;

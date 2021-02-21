@@ -1,0 +1,19 @@
+@import-normalize; /* bring in normalize.css styles */
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
+@import "~bootstrap/scss/_modal.scss";
+@import "~bootstrap/scss/_buttons.scss";
+@import "~bootstrap/scss/_close.scss";
+@import "~bootstrap/scss/utilities/_screenreaders.scss";
+
+body {
+  /* padding: 0px 40px; */
+  background-color: #edf3f4;
+  color: #0e0e0e;
+}
+
+a {
+  text-decoration: none;
+  color: #0e0e0e;
+}

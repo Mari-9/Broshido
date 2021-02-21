@@ -1,0 +1,10 @@
+.reserve_wrapper {
+  display: grid;
+  justify-content: center;
+  margin: 100px 0px;
+}
+
+.reserve_wrapper > .button {
+  display: grid;
+  justify-content: center;
+}

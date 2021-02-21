@@ -1,9 +1,10 @@
+import Lauren from "./Images/Lauren.jpg";
 export function fetchSamuraiProfiles() {
   return [
     {
       title: "Yokai Extermination",
       children: [
-        { id: 1, name: "Lauren" },
+        { id: 1, image: Lauren , name: "Lauren" },
         { id: 2, name: "Suga" },
         { id: 3, name: "Taro" }
       ]
@@ -31,6 +32,28 @@ export function fetchSamuraiProfiles() {
         { id: 2, name: "Echan" },
         { id: 3, name: "Someone" }
       ]
+    }
+  ];
+}
+
+export function fetchTestimonials() {
+  return [
+    {
+      name: "Tim",
+      rating: 5,
+      review: "something"
+    },
+
+    {
+      name: "Tim",
+      rating: 4,
+      review: "something"
+    },
+
+    {
+      name: "Tim",
+      rating: 4,
+      review: "something"
     }
   ];
 }
