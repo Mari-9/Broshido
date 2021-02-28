@@ -103,7 +103,10 @@ function ProfileModal(props) {
           exact
           to={"/CheckOut"}
           onClick={() =>
-            globalActions.setCurrentSamurai({ ...props.info, selectedDate })
+            globalActions.setCurrentSamurai({
+              ...props.info,
+              reservationDates: selectedDate
+            })
           }
         >
           Reserve Now

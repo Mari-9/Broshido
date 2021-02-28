@@ -162,3 +162,20 @@ export function fetchTestimonials() {
     }
   ];
 }
+
+export function fetchOrders() {
+  return [
+    {
+      orderId: 3482,
+      status: "completed"
+    },
+    {
+      orderId: 3389,
+      status: "pending"
+    },
+    {
+      orderId: 3879,
+      status: "confirmed"
+    }
+  ];
+}

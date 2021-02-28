@@ -6,6 +6,8 @@ import Profiles from "./Profiles";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
 import CheckOut from "./CheckOut";
+import Admin from "./Admin";
+import OrderSummary from "./OrderSummary";
 import ScrollIntoView from "./ScrollIntoView";
 import { Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -27,6 +29,8 @@ function App() {
           <Route path="/Profiles" component={Profiles}></Route>
           <Route path="/Contact-us" component={ContactUs}></Route>
           <Route path="/CheckOut" component={CheckOut}></Route>
+          <Route path="/OrderSummary" component={OrderSummary}></Route>
+          <Route path="/Admin" component={Admin}></Route>
         </Switch>
       </ScrollIntoView>
       <Footer />
