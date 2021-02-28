@@ -6,14 +6,38 @@
 @import "~bootstrap/scss/_buttons.scss";
 @import "~bootstrap/scss/_close.scss";
 @import "~bootstrap/scss/utilities/_screenreaders.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap");
 
 body {
   /* padding: 0px 40px; */
-  background-color: #edf3f4;
+  background-color: #bebebf;
   color: #0e0e0e;
 }
 
 a {
   text-decoration: none;
+  color: #edf3f4;
+  transition: 0.2s;
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
   color: #0e0e0e;
+}
+
+a:hover {
+  color: #f2e106;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Passion One", cursive;
+}
+
+h4{
+  font-size: 25px;
 }

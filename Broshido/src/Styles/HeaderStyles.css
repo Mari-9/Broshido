@@ -1,32 +1,19 @@
-/* .header_wrapper {
-  display: grid;
-  justify-items: center;
-  grid-template-rows: 100px 100px;
-  padding-top: 50px;
-}
-
-.header_wrapper > .HeaderNavLinks {
-  padding-top: 60px;
-}
-
-
-need a mini header look as well!!!!!!!!
-*/
-
 .header_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 30px;
+  padding-top: 25px;
+  padding-bottom: 0px;
+  background-color: #0e0e0e;
 }
 
 .header_wrapper > .logo img {
-  width: 200px;
+  width: 275px;
 }
 
 .header_wrapper > .HeaderNavLinks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 50px 50px 50px 50px;
+  padding: 15px 50px 20px 50px;
 }

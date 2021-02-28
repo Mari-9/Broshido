@@ -20,10 +20,12 @@ class Testimonials extends Component {
   render() {
     return (
       <>
-        <div className="testimonials_header">
-          <h1>TESTIMONIALS</h1>
+        <div className="testimonials_container">
+          <div className="testimonials_header">
+            <h1>TESTIMONIALS</h1>
+          </div>
+          <div className="tesitmonials_wrapper">{this.renderSamurai()}</div>
         </div>
-        <div className="tesitmonials_wrapper">{this.renderSamurai()}</div>
       </>
     );
   }

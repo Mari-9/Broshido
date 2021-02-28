@@ -5,20 +5,28 @@ import About from "./About";
 import Profiles from "./Profiles";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import CheckOut from "./CheckOut";
 import ScrollIntoView from "./ScrollIntoView";
 import { Route, Switch } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import Headroom from "react-headroom";
+library.add(fab, fas);
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Headroom>
+        <Header />
+      </Headroom>
       <ScrollIntoView>
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route path="/About" component={About}></Route>
           <Route path="/Profiles" component={Profiles}></Route>
           <Route path="/Contact-us" component={ContactUs}></Route>
+          <Route path="/CheckOut" component={CheckOut}></Route>
         </Switch>
       </ScrollIntoView>
       <Footer />

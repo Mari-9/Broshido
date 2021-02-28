@@ -1,11 +1,21 @@
 import "./Styles/HomeStyles.css";
-import logo from "./Images/HomepgSamurai.jpg";
+import logo from "./Images/Broshido.png";
+import hook from "./Images/HomepgSamurai.jpg";
 import Testimonials from "./Testimonials.js";
 import Reservation from "./Reservation.js";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   return (
     <>
+      {/* Special header */}
+      <div className="skewed_home_black_wrapper">
+        <div className="content">
+            <Reservation />
+         
+        </div>
+      </div>
+
       {/* Hook */}
       <div className="hook_wrapper">
         <div className="hook_left">
@@ -13,7 +23,7 @@ function Home() {
         </div>
 
         <div className="hook_right foo">
-          <img src={logo} alt="HomepgSamurai" />
+          <img src={hook} alt="HomepgSamurai" />
         </div>
       </div>
       <div className="hook_information">
@@ -30,27 +40,36 @@ function Home() {
       {/* samurai type */}
       <div className="typesOfSamurai_wrapper">
         <div className="type">
-          <img src="" alt="cute samrai" />
           <h1>YOKAI EXTERMINATION</h1>
+          <p>
+            Yokai can be so annoying and even more annoying to get rid of. These
+            Samurai can help!{" "}
+          </p>
         </div>
         <div className="type">
-          <img src="" alt="cute samrai 2" />
           <h1>BODY GAURD</h1>
+          <p>
+            If you feel you are in need of a body guard, these are the samurai
+            for you!{" "}
+          </p>
         </div>
 
         <div classeName="type">
-          <img src="" alt="cute samrai 3" />
           <h1>ENTERTAINMENT</h1>
+          <p>
+            Are you worried your party will be just a regular party? Why not
+            spice it up with a little sword play!{" "}
+          </p>
         </div>
 
         <div className="type">
-          <img src="" alt="cute samrai 4" />
           <h1>PRANK YOUR FRIENDS</h1>
+          <p>Who doesn’t love pranking friends. Our samurai do! </p>
         </div>
       </div>
 
       <Testimonials />
-      <Reservation />
+      {/* <Reservation /> */}
     </>
   );
 }

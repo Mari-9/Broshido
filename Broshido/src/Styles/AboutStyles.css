@@ -1,8 +1,12 @@
+.about_container {
+  background-color: #ffffff;
+  margin: 70px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+}
 .about_wrapper {
   display: grid;
   justify-items: center;
-  grid-template-rows: 100px 100px 100px;
-  padding: 100px 0px 150px 0px;
+  padding: 40px 0px 40px 0px;
 }
 
 .about_wrapper > .about_story {
@@ -10,13 +14,23 @@
   justify-items: center;
   padding: 0px 100px 0px 100px;
 }
+.about_story p {
+  font-size: 20px;
+}
 
 .about_wrapper > .whoWeAre h1 {
-  font-size: 3.5em;
+  font-size: 4em;
   font-weight: 900;
   height: 50px;
+  margin: none;
 }
 
 .about_wrapper > .group_image {
-  padding-top: 50px;
+  display: grid;
+  justify-items: center;
+  padding-bottom: 30px;
+}
+
+.group_image img {
+  width: 70%;
 }

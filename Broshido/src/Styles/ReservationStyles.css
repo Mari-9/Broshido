@@ -1,10 +1,15 @@
 .reserve_wrapper {
   display: grid;
   justify-content: center;
-  margin: 100px 0px;
 }
 
-.reserve_wrapper > .button {
-  display: grid;
-  justify-content: center;
+.reserve_text a {
+  color: #0e0e0e;
+  font-size: 28px;
+  transition: 0.2s;
 }
+
+.reserve_text a:hover {
+  color: #f2e106;
+}
+

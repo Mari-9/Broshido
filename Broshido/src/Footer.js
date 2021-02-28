@@ -1,5 +1,6 @@
 import "./Styles/FooterStyles.css";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Footer() {
   return (
@@ -32,19 +33,27 @@ function Footer() {
 
       <div className="social_wrapper">
         <div className="Icon">
-          <a href="https://www.facebook.com/">Facebook</a>
+          <a href="https://www.facebook.com/">
+            <FontAwesomeIcon icon={["fab", "facebook-square"]} size="2x" />
+          </a>
         </div>
 
         <div className="Icon">
-          <a href="https://twitter.com/home">Twitter</a>
+          <a href="https://twitter.com/home">
+            <FontAwesomeIcon icon={["fab", "twitter-square"]} size="2x" />
+          </a>
         </div>
 
         <div className="Icon">
-          <a href="https://www.youtube.com/">Youtube</a>
+          <a href="https://www.youtube.com/">
+            <FontAwesomeIcon icon={["fab", "youtube-square"]} size="2x" />
+          </a>
         </div>
 
         <div className="Icon">
-          <a href="https://www.instagram.com/">Instagram</a>
+          <a href="https://www.instagram.com/">
+            <FontAwesomeIcon icon={["fab", "instagram-square"]} size="2x" />
+          </a>
         </div>
       </div>
     </div>

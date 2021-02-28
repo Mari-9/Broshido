@@ -6,7 +6,7 @@ function Header() {
     // <!-- main pg header -->
     <div className="header_wrapper">
       <div className="logo">
-        <img src={logo} alt="LOGO"  />
+        <img src={logo} alt="LOGO" />
       </div>
       <div className="HeaderNavLinks">
         <div className="NavLink">
