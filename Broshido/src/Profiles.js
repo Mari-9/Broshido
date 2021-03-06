@@ -6,8 +6,8 @@ import { fetchSamuraiProfiles } from "./DataSource";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Calendar from "react-calendar";
-import "./Styles/CalendarStyles.css";
 import "react-calendar/dist/Calendar.css";
+import "./Styles/CalendarStyles.css";
 import { isBefore, isWithinInterval } from "date-fns";
 import useGlobal from "./Store";
 
@@ -48,54 +48,62 @@ function ProfileModal(props) {
       </Modal.Header>
 
       <Modal.Body>
-        <div className="lightbox_profile_pic">
-          <img src={props.info.image} alt="Samurai" />
-        </div>
-
-        <div className="lightbox_flex">
-          <div className="important_info">
-            <h4>Type:{props.info.type}</h4>
-            <h4>Price:{props.info.price}</h4>
-            <h4>
-              Start Date:
-              <input
-                type="text"
-                placeholder="MM/DD/YYYY"
-                value={selectedDate[0].toLocaleDateString()}
-                onChange={e => checkPastDate(e)}
+        <div className="modal_body_wrapper">
+          <div className="lightbox_top">
+            <img src={props.info.image} alt="Samurai" />
+            <div>
+              <Calendar
+                onChange={checkPastDate}
+                value={selectedDate}
+                selectRange="true"
+                tileDisabled={({ date, view }) =>
+                  checkBookedDates({ date, view }, props.info.booked)
+                }
               />
-            </h4>
-            <div className={showStartWarning ? "date_warning" : "hidden"}>
-              *Please select a future date.
             </div>
-            <h4>
-              End Date:
-              <input
-                type="text"
-                placeholder="MM/DD/YYYY"
-                value={selectedDate[1].toLocaleDateString()}
-                onChange={e => checkPastDate(e)}
-              />
-            </h4>
-            <div className={showEndWarning ? "date_warning" : "hidden"}>
-              *Please select a future date.
-            </div>
-            <div>*Greyed out dates are already reserved</div>
           </div>
-          <Calendar
-            onChange={checkPastDate}
-            value={selectedDate}
-            selectRange="true"
-            tileDisabled={({ date, view }) =>
-              checkBookedDates({ date, view }, props.info.booked)
-            }
-          />
+
+          <div className="lightbox_flex">
+            <div className="important_info">
+              <div className="samurai_classifications">
+                <h4>Type:{props.info.type}</h4>
+                <h4>Price:{props.info.price}</h4>
+              </div>
+              <div className="reservation_specifications">
+                <h4>
+                  Start Date:
+                  <input
+                    type="text"
+                    placeholder="MM/DD/YYYY"
+                    value={selectedDate[0].toLocaleDateString()}
+                    onChange={e => checkPastDate(e)}
+                  />
+                </h4>
+                <div className={showStartWarning ? "date_warning" : "hidden"}>
+                  *Please select a future date.
+                </div>
+                <h4>
+                  End Date:
+                  <input
+                    type="text"
+                    placeholder="MM/DD/YYYY"
+                    value={selectedDate[1].toLocaleDateString()}
+                    onChange={e => checkPastDate(e)}
+                  />
+                </h4>
+                <div className={showEndWarning ? "date_warning" : "hidden"}>
+                  *Please select a future date.
+                </div>
+                <div>*Greyed out dates are already reserved</div>
+              </div>
+            </div>
+          </div>
+          {/* <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
+          </p> */}
         </div>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
       </Modal.Body>
       <Modal.Footer>
         <NavLink

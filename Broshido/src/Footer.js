@@ -32,10 +32,14 @@ function LoginModal(props) {
       </Modal.Header>
 
       <Modal.Body>
-        Username:
-        <input type="text" onChange={e => setUsername(e.target.value)} />
-        Password:
-        <input type="password" onChange={e => setPassword(e.target.value)} />
+        <div>
+          <h4>Username:</h4>
+          <input type="text" onChange={e => setUsername(e.target.value)} />
+        </div>
+        <div>
+          <h4>Password:</h4>
+          <input type="password" onChange={e => setPassword(e.target.value)} />
+        </div>
       </Modal.Body>
       <Modal.Footer>
         <button onClick={() => verifyLogin()}>Login</button>

@@ -11,18 +11,26 @@
 
 .tesitmonials_wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  row-gap: 15px;
   column-gap: 15px;
 }
 .test_name {
   font-family: "Passion One", cursive;
+  font-size: 20px;
 }
 .tesitmonials_wrapper > .testimonials {
-  background-color: #ffffff;
-  padding: 40px 30px 40px 30px;
+  background-color: #d8d8d9;
+  padding: 20px 30px 40px 30px;
   transition: 0.5s;
 }
 
 .tesitmonials_wrapper > .testimonials:hover {
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+  .testimonials_header {
+    font-size: 20px;
+  }
 }

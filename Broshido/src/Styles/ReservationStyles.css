@@ -13,3 +13,9 @@
   color: #f2e106;
 }
 
+@media screen and (max-width: 600px) {
+  .reserve_text a {
+    font-size: 20px;
+    text-align: center;
+  }
+}

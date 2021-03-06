@@ -1,0 +1,102 @@
+.checkout_wrapper {
+  background: #fff;
+  margin: 70px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+  padding: 70px 50px 70px 50px;
+}
+
+.checkout_wrapper input {
+  border: none;
+  transition: 0.4s;
+}
+
+.checkout_wrapper input:hover {
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top_wrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 45px;
+}
+
+.dates_of_reservation {
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+}
+
+.confirmation_samurai_info {
+  font-family: "Passion One", cursive;
+  font-size: 35px;
+  display: grid;
+}
+
+.top_wrapper img {
+  width: 50%;
+}
+
+.confirmation_samurai_info > .confirmation_dates {
+  display: grid;
+  align-content: end;
+}
+
+/* credit card stuff */
+.credit_card_input input {
+  width: 100%;
+  position: relative;
+  border-bottom: 4px solid #bfb431;
+}
+
+.cc_name_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 45px;
+}
+
+.cc_security_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 45px;
+}
+
+.confirmation_information a {
+  color: #0e0e0e;
+  background-color: #f2e106;
+  margin-left: calc(100% - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 200px;
+  height: 50px;
+  transition: 0.4s;
+  margin-top: 20px;
+}
+
+.confirmation_information a:hover {
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+  .checkout_wrapper {
+    margin: 7%;
+    padding: 25px;
+  }
+
+  .top_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cc_name_info,
+  .cc_security_info {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmation_information a {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+}

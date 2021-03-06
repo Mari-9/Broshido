@@ -14,11 +14,16 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import Headroom from "react-headroom";
+import background from "./Images/WholeSiteBackground.png";
+
 library.add(fab, fas);
 
 function App() {
   return (
     <div className="App">
+      {/* <div className="background_image">
+        <img src={background} />
+      </div> */}
       <Headroom>
         <Header />
       </Headroom>

@@ -4,16 +4,23 @@
   align-items: center;
   flex-direction: column;
   padding-top: 25px;
-  padding-bottom: 0px;
   background-color: #0e0e0e;
 }
 
 .header_wrapper > .logo img {
-  width: 275px;
+  width: 200px;
 }
 
 .header_wrapper > .HeaderNavLinks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 15px 50px 20px 50px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .header_wrapper > .HeaderNavLinks {
+    font-size: 18px;
+    padding: 15px 15px 20px 15px;
+  }
 }

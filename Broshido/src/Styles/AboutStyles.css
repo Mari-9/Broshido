@@ -1,6 +1,6 @@
 .about_container {
   background-color: #ffffff;
-  margin: 70px;
+  margin: 7%;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
 }
 .about_wrapper {
@@ -33,4 +33,21 @@
 
 .group_image img {
   width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+  .about_wrapper {
+    padding: 0px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .about_wrapper > .whoWeAre h1 {
+    height: auto;
+  }
+
+  .about_wrapper > .about_story {
+    padding: 0 25px;
+    text-align: left;
+  }
 }

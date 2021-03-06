@@ -1,0 +1,70 @@
+.order_summary_wrapper {
+  background: #fff;
+  margin: 7%;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+  padding: 70px 50px 70px 50px;
+}
+
+.order_summary_header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  padding: 0px 105px;
+}
+.order_summary_personal_info {
+  display: grid;
+  row-gap: 10px;
+}
+
+.order_summary_personal_info h2 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+/* button */
+.order_summary_wrapper button {
+  background-color: #bebebf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 40px;
+  transition: 0.4s;
+  margin-top: 20px;
+  border: none;
+}
+
+.order_summary_wrapper button:hover {
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* order canceled */
+.order_canceled {
+  background: #fff;
+  height: 100px;
+  margin: 7%;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+  padding: 70px 50px 70px 50px;
+  display: grid;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .order_summary_wrapper {
+    padding: 25px;
+  }
+
+  .order_summary_header {
+    padding: 0%;
+  }
+
+  .order_summary_wrapper button {
+    width: 100%;
+  }
+
+  .order_canceled {
+    padding: 25px;
+    text-align: center;
+  }
+}

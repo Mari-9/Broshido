@@ -182,3 +182,10 @@
 .email_input_wrapper textarea:hover {
   box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.05);
 }
+
+@media screen and (max-width: 600px) {
+  .email_wrapper {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

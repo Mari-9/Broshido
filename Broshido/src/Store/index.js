@@ -10,7 +10,7 @@ const initialState = {
   type: null,
   booked: [[new Date(), new Date()]],
   reservationDates: [new Date(), new Date()],
-  creditCard: null,
+  orderInfo: { firstName: "", lastName: "", email: "", creditCard: "" },
   orderId: null,
   status: null,
   orders: fetchOrders(),

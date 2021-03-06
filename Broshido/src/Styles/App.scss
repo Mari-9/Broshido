@@ -10,10 +10,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap");
 
 body {
-  /* padding: 0px 40px; */
   background-color: #bebebf;
   color: #0e0e0e;
 }
+
+.App {
+  background-image: url(../Images/WholeSiteBackground.png);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+
+}
+
 
 a {
   text-decoration: none;
@@ -38,6 +48,11 @@ h4 {
   font-family: "Passion One", cursive;
 }
 
-h4{
+h4 {
   font-size: 25px;
+}
+
+.reservation_specifications h4 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
 }

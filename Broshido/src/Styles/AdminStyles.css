@@ -1,0 +1,36 @@
+.admin_wrapper {
+  background: #fff;
+  margin: 50px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+  padding: 50px 50px 50px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+.admin_wrapper h4 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.admin_wrapper button {
+  background-color: #bebebf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 40px;
+  transition: 0.4s;
+  margin-top: 20px;
+  border: none;
+}
+
+.admin_wrapper button:hover {
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+  .admin_wrapper {
+    grid-template-columns: 1fr;
+  }
+}
