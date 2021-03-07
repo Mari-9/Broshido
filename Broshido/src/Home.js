@@ -7,12 +7,11 @@ import { NavLink } from "react-router-dom";
 function Home() {
   return (
     <div className="backgroundImage">
-
       <div className="page_container">
         {/* Hook */}
         <div className="hook_wrapper">
           <div className="hook_left">
-            <h2>Do feel you have been missing a samurai in your life?</h2>
+            <h2>Do you feel you have been missing a samurai in your life?</h2>
           </div>
 
           <div className="hook_right foo">
