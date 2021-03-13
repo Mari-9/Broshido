@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Styles/FooterStyles.css";
 import "./Styles/ProfilesStyles.css";
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { fetchSamuraiProfiles } from "./DataSource";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
@@ -10,6 +10,20 @@ import "react-calendar/dist/Calendar.css";
 import "./Styles/CalendarStyles.css";
 import { isBefore, isWithinInterval } from "date-fns";
 import useGlobal from "./Store";
+import groupBy from "lodash.groupby";
+
+const month = new Date().getMonth();
+function randomDay(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function getRandomBookedDate() {
+  return [
+    [
+      new Date(2021, month, randomDay(2, 9)),
+      new Date(2021, month, randomDay(11, 17))
+    ]
+  ];
+}
 
 function checkBookedDates({ date, view }, bookedDates) {
   if (view === "month") return isWithinRanges(date, bookedDates);
@@ -28,7 +42,6 @@ function ProfileModal(props) {
   const [showEndWarning, isEndPastDate] = React.useState(false);
   const [selectedDate, onDateChange] = React.useState([new Date(), new Date()]);
   const [globalState, globalActions] = useGlobal();
-
   const checkPastDate = ([startDate, endDate]) => {
     onDateChange([startDate, endDate]);
     isStartPastDate(isBefore(new Date(startDate), new Date()));
@@ -98,11 +111,6 @@ function ProfileModal(props) {
               </div>
             </div>
           </div>
-          {/* <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </p> */}
         </div>
       </Modal.Body>
       <Modal.Footer>
@@ -125,10 +133,20 @@ function ProfileModal(props) {
 }
 
 function RenderSamurai() {
-  const [modalInfo, setModalShow] = React.useState({
+  const [modalInfo, setModalShow] = useState({
     visible: false,
     info: { name: null, image: null, type: null, price: null, booked: null }
   });
+  const [data, setData] = useState({ types: [], samurai: [] });
+  useEffect(() => {
+    fetch("https://broshido.fawa.space/samurai.php")
+      .then(response => response.json())
+      .then(json => {
+        const samuraiSet = new Set();
+        json.forEach(item => samuraiSet.add(item.type));
+        setData({ types: [...samuraiSet], samurai: json });
+      });
+  }, []);
 
   return (
     <>
@@ -138,21 +156,28 @@ function RenderSamurai() {
         onHide={() => setModalShow({ ...modalInfo, visible: false })}
       />
 
-      {fetchSamuraiProfiles().map(item => (
+      {data.types.map(item => (
         <div className="Section1">
           <div className="section_header">
-            <h1>{item.title}</h1>
+            <h1>{item}</h1>
           </div>
           <div className="samurai_type">
-            {item.children.map(samurai => (
-              <div
-                className="samurai"
-                onClick={() => setModalShow({ visible: true, info: samurai })}
-              >
-                <img src={samurai.image} alt="Samurai" />
-                <h2>{samurai.name}</h2>
-              </div>
-            ))}
+            {data.samurai.map(samurai => {
+              return samurai.type == item ? (
+                <div
+                  className="samurai"
+                  onClick={() =>
+                    setModalShow({
+                      visible: true,
+                      info: { ...samurai, booked: getRandomBookedDate() }
+                    })
+                  }
+                >
+                  <img src={samurai.image} alt="Samurai" />
+                  <h2>{samurai.name}</h2>
+                </div>
+              ) : null;
+            })}
           </div>
         </div>
       ))}
@@ -168,7 +193,6 @@ function Profiles() {
       <div className="samurai_profiles_wrapper">
         <RenderSamurai />
       </div>
-      ;
     </>
   );
   // }

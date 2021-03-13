@@ -1,8 +1,8 @@
 .admin_wrapper {
   background: #fff;
-  margin: 50px;
+  margin: 7%;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
-  padding: 50px 50px 50px 50px;
+  padding: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
@@ -26,6 +26,55 @@
 }
 
 .admin_wrapper button:hover {
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* table */
+.all_samurai_admin {
+  margin: 7%;
+  background-color: #fff;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+  padding: 50px;
+}
+
+.header {
+  font-family: "Passion One", cursive;
+  font-size: 25px;
+}
+.samurai_admin_grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(5, 2fr);
+  margin: 7%;
+  background-color: #fff;
+}
+.samurai_admin_grid > span,
+.samurai_admin_grid > span > input {
+  padding: 8px 4px;
+  max-width: 30ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: grid;
+  row-gap: 5px;
+}
+
+.samurai_admin_grid > span > input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  border-bottom-color: #bfb431;
+}
+
+.samurai_admin_grid > span > button {
+  border: none;
+  font-family: "Lato", sans-serif;
+  background-color: #f2e106;
+  padding: 3px 10px;
+  transition: 0.4s;
+}
+
+.samurai_admin_grid > span > button:hover {
   box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.1);
 }
 

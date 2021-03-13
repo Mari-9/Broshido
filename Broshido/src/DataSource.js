@@ -1,4 +1,15 @@
 import Lauren from "./Images/Lauren.jpg";
+import Nene from "./Images/Nene.jpg";
+import Satoshi from "./Images/SatoshiA.jpg";
+import Ken from "./Images/Ken.jpg";
+import Keisuke from "./Images/Keisuke.jpg";
+import Suga from "./Images/Suga.jpg";
+import Taro from "./Images/TaroA.jpg";
+import Ogawa from "./Images/Ogawa.jpg";
+import Naoko from "./Images/Naoko.jpg";
+import Seiya from "./Images/Seiya.jpg";
+import Eri from "./Images/Eri.jpg";
+
 const month = new Date().getMonth();
 function randomDay(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -26,7 +37,7 @@ export function fetchSamuraiProfiles() {
         },
         {
           id: 2,
-          image: Lauren,
+          image: Satoshi,
           name: "Satoshi",
           price: "$30 per hour",
           type: "Yokai Extermination",
@@ -34,7 +45,7 @@ export function fetchSamuraiProfiles() {
         },
         {
           id: 3,
-          image: Lauren,
+          image: Nene,
           name: "Nene",
           price: "$20 per hour",
           type: "Yokai Extermination",
@@ -47,7 +58,7 @@ export function fetchSamuraiProfiles() {
       children: [
         {
           id: 1,
-          image: Lauren,
+          image: Suga,
           name: "Suga",
           price: "$40 per hour",
           type: "Body Guard",
@@ -55,7 +66,7 @@ export function fetchSamuraiProfiles() {
         },
         {
           id: 2,
-          image: Lauren,
+          image: Keisuke,
           name: "Keisuke",
           price: "$30 per hour",
           type: "Body Guard",
@@ -76,7 +87,7 @@ export function fetchSamuraiProfiles() {
       children: [
         {
           id: 1,
-          image: Lauren,
+          image: Ken,
           name: "Ken",
           price: "$20 per hour",
           type: "Body Entertainment",
@@ -84,7 +95,7 @@ export function fetchSamuraiProfiles() {
         },
         {
           id: 2,
-          image: Lauren,
+          image: Taro,
           name: "Taro",
           price: "$30 per hour",
           type: "Body Entertainment",
@@ -92,7 +103,7 @@ export function fetchSamuraiProfiles() {
         },
         {
           id: 3,
-          image: Lauren,
+          image: Seiya,
           name: "Seiya",
           price: "$25 per hour",
           type: "Body Entertainment",
@@ -105,7 +116,7 @@ export function fetchSamuraiProfiles() {
       children: [
         {
           id: 1,
-          image: Lauren,
+          image: Naoko,
           name: "Naoko",
           price: "$30 per hour",
           type: "Prank Your Friends",
@@ -113,16 +124,16 @@ export function fetchSamuraiProfiles() {
         },
         {
           id: 2,
-          image: Lauren,
-          name: "Eri",
+          image: Eri,
+          name: "E-chan",
           price: "$20 per hour",
           type: "Prank Your Friends",
           booked: getRandomBookedDate()
         },
         {
           id: 3,
-          image: Lauren,
-          name: "Ogawa",
+          image: Ogawa,
+          name: "Ogawa-nyan",
           price: "$50 per hour",
           type: "Prank Your Friends",
           booked: getRandomBookedDate()
