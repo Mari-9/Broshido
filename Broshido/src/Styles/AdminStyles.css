@@ -78,8 +78,74 @@
   box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.section_header {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  align-items: center;
+}
+
+.section_header svg {
+  justify-self: end;
+  margin-right: 7%;
+  padding-right: 50px;
+  transition: 0.2s;
+}
+
+.section_header svg:hover {
+  color: #f2e106;
+}
+
+select {
+  border: none;
+  border-bottom: #bfb431 2px solid;
+}
+
+.id_number {
+  margin: auto 0;
+}
+
+.modal-body input {
+  border: none;
+  border-bottom: #bfb431 2px solid;
+  transition: 0.2s;
+}
+
+.modal-body input:hover {
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.samurai_admin_grid > span.mobile_header {
+  display: none;
+}
 @media screen and (max-width: 600px) {
   .admin_wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .section_header {
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-columns: none;
+  }
+
+  .section_header h1 {
+    font-size: 2.5rem;
+  }
+
+  .section_header svg {
+    justify-self: end;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .samurai_admin_grid {
+    grid-template-columns: none;
+  }
+  .samurai_admin_grid > .header {
+    display: none;
+  }
+  .mobile_header {
+    display: grid;
+    font-family: "Passion One", cursive;
+    font-size: 25px;
   }
 }

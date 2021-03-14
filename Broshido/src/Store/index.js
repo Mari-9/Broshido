@@ -14,7 +14,8 @@ const initialState = {
   orderId: null,
   status: null,
   orders: fetchOrders(),
-  loginModal: false
+  loginModal: false,
+  samurai: []
 };
 
 const useGlobal = globalHook(React, initialState, actions);

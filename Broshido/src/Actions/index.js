@@ -3,10 +3,6 @@ export const setCurrentSamurai = (store, info) => {
 };
 
 export const setOrderInformation = (store, orderInfo) => {
-  // const firstName = store.state.firstName;
-  // const lastName = store.state.lastName;
-  // const email = store.state.email;
-
   const id = Math.floor(Math.random() * (4000 - 1000 + 1)) + 1000;
   const orders = store.state.orders;
   const status = "pending";
@@ -14,9 +10,9 @@ export const setOrderInformation = (store, orderInfo) => {
   store.setState({ orderInfo, orderId: id, status: status, orders: orders });
 };
 
-// firstName.firstName
-// lastName.lastName
-// email.email
+export const setSamuraiList = (store, samurai) => {
+  store.setState({ samurai: samurai });
+};
 
 export const cancelOrder = (store, orderId) => {
   let orders = store.state.orders;
